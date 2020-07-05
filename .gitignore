@@ -33,6 +33,7 @@
 
 # VSCode 
 .vscode/
+.vs/
 
 # Generated
 *.obj
