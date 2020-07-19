@@ -1,16 +1,19 @@
 #include <iostream>
-#include <vector>
-#include <string>
-
 using namespace std;
+
+#include "noiseMaker.h"
+
 
 int main()
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-    
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
+    wcout << "oneloneocder.com - Sythesizer Part 1" << endl;
+
+    // Get all sound hardware
+    vector<wstring> devices = NoiseMaker<short>::Enumerate();
+
+    // Display findings
+    for (auto d : devices) wcout << "Found Output Device:" << d << endl;
+
+    // Create sound machine !! 
+    NoiseMaker<short> sound(devices[0], 44100, 1, 8, 512);
 }
