@@ -34,3 +34,8 @@
 # vscode
 .vscode/
 .vs/
+
+# JUCE
+Builds/
+JuceLibraryCode/
+Wavy.jucer
